@@ -1,25 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FileUploadService } from '../../services/file-upload.service';
+import {ThreeService} from "../../services/three.service";
 
 @Component({
   selector: 'app-upload-files',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './upload-files.component.html',
-  styleUrl: './upload-files.component.css'
+  styleUrls: ['./upload-files.component.css']
 })
 export class UploadFilesComponent implements OnInit {
+
+
+
+  @ViewChild('background', { static: true }) background!: ElementRef<any>;
+
   selectedFiles?: FileList;
   message: string[] = [];
 
-  fileInfos?: Observable<any>;
+  fileInfos!: Observable<any>;
 
-  constructor(private uploadService: FileUploadService) { }
+  constructor(private uploadService: FileUploadService, private threeService: ThreeService) { }
 
   ngOnInit(): void {
+    this.threeService.init(this.background);
     this.fileInfos = this.uploadService.getFiles();
   }
 

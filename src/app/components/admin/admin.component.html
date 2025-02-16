@@ -1,0 +1,76 @@
+<p>admin works!</p>
+<div>{{this.table}}</div>
+<h1>{{this.tableObj.length}}</h1>
+<table class="table">
+  <thead>
+<!--  <tr>
+    <th scope="col" >#</th>
+
+    <th scope="col" *ngFor="let header of headers">   {{ header }}   </th>
+
+  </tr>-->
+<tr *ngFor="let item of this.tableObj.slice(0,1); index as i">
+  <th scope="col" >#</th>
+  <th scope="col" >{{ item.agentName}}</th>
+  <th scope="col" >{{ item.agentExten }}</th>
+  <th scope="col" >{{ item.state }}</th>
+  <th scope="col" >{{ item.agentNo }}</th>
+  <th scope="col" >{{ item.stateTime }}</th>
+  <th scope="col" >{{ item.releaseCode }}</th>
+  <th scope="col" >{{ item.aCDCalls }}</th>
+  <th scope="col" >{{ item.nonACDCalls }}</th>
+  <th scope="col" >{{ item.dNIS }}</th>
+  <th scope="col" >{{ item.aN }}</th>
+
+</tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let item of this.tableObj.slice(1,this.tableObj.length); index as i">
+    <th scope="row">{{i}}</th>
+    <td>{{ item.agentName }}</td>
+    <td>{{ item.agentExten }}</td>
+    <td>{{ item.state }}</td>
+    <td>{{ item.agentNo }}</td>
+    <td>{{ item.stateTime }}</td>
+    <td>{{ item.releaseCode }}</td>
+    <td>{{ item.aCDCalls }}</td>
+    <td>{{ item.nonACDCalls }}</td>
+    <td>{{ item.dNIS }}</td>
+    <td>{{ item.aN }}</td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

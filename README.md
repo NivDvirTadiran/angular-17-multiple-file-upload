@@ -11,7 +11,7 @@ Build an Angular 17 Multiple File upload example using Bootstrap, Multipart File
 Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files.
 
 For more detail, please visit:
-> [Angular 17 Multiple File upload example](https://www.bezkoder.com/angular-17-multiple-file-upload/)
+> [Angular 17 Multiple File upload example](https://www.bezkoder.com/angular-15-multiple-file-upload/)
 
 > [Angular 17 Multiple File upload example with Progress bar & Bootstrap](https://www.bezkoder.com/angular-17-multiple-file-upload-progress-bar/)
 

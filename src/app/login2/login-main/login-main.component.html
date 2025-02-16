@@ -1,0 +1,48 @@
+
+<html >
+<head>
+  <style>
+
+  </style>
+  <title></title>
+</head>
+<body>
+
+<!--article><div class="Frame-1 relative">
+<section class="relative " Style="{ 'background': backgroundColor }"-->
+
+<!--storybook-button-globe></storybook-button-globe-->
+
+<storybook-background1
+  (changeLang)="changLanguage($event)"
+  [ACC_VERSION]="this.ACC_VERSION">
+</storybook-background1>
+
+
+<!--button mat-raised-button (click)="openReplacePassForm()">ReplacePassForm</button>
+<button mat-raised-button (click)="openRegisterForm()">RegisterForm</button>
+<button mat-raised-button (click)="openVerificationForm()">VerificationForm</button>
+<button mat-raised-button (click)="openForgotPassForm()">forgotPassForm</button>
+<button mat-raised-button (click)="profile2()">profile2</button>
+<button mat-raised-button (click)="configuratin()">configuratin</button>
+<button mat-raised-button (click)="home2()">home2</button-->
+
+
+<storybook-login-form
+  [isLoggedIn]="false"
+  [isLoading]="isLoading"
+  [isLoginFailed]="isLoginFailed"
+  [loginErrorMessage]="loginErrorMessage"
+  [mForm]="loginForm"
+  [storyInputs]="storyInputsInOrder"
+  (sendLoginReq)="onSubmit()"
+></storybook-login-form>
+
+<storybook-spinner1 *ngIf="isLoading"  class="storybook-spinner1"></storybook-spinner1>
+<!--/section></div>
+</article-->
+
+</body>
+</html>
+
+

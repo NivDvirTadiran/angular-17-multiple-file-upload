@@ -1,0 +1,57 @@
+
+
+
+<div id="main-login-card" class="col-md-12">
+  <storybook-card class="card-container"></storybook-card>
+  <div  class="h-100 d-flex align-items-center justify-content-center">
+    <div class="form-header">
+      <a >{{'Aeonix App Center' | translate}}</a>
+    </div>
+
+    <br>
+    <!--form name="form"  (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate --> <!-- *ngIf="!isConfigSuccess"-->
+      <form name="currentForm"   [formGroup]="mForm">
+      <div  *ngIf="!isLoggedIn" class="Vector">
+
+        <div class="login-button">
+
+            <div *ngIf="isLoggedIn">isConfigSuccess</div>
+            <div *ngIf="!isLoggedIn && storyInputsInOrder.length === 0">empty</div>
+            <storybook-input
+              [storyInput]="storyInputsInOrder[0]"
+              [toFocus]=true
+              [direction]="this.extractDirection()"
+              (onArchiveInput)="onArchiveInput.emit($event)"
+              (onPinInput)="onPinInput.emit($event)"
+              [currentForm]="mForm">
+            </storybook-input>
+
+            <storybook-input
+              [storyInput]="storyInputsInOrder[1]"
+              [direction]="this.extractDirection()"
+              (onArchiveInput)="onArchiveInput.emit($event)"
+              (onPinInput)="onPinInput.emit($event)"
+              [currentForm]="mForm">
+            </storybook-input>
+
+
+            <br>
+            <div class="thematic-break"></div>
+            <div class="login-failed-message" role="alert" >
+              <p *ngIf="isLoginFailed && loginErrorMessage.length>0" [dir]="this._translate?.currentDir ?? 'ltr'">*  {{ loginErrorMessage.toString() | translate  }}</p>
+            </div>
+
+
+            <!--a (click)="this.openForgetPassForm.emit();" class="forgot-password" [dir]="this._translate!.currentDir" >
+              {{ 'Forgot Password?' | translate}}
+            </a-->
+
+            <storybook-button-continue size="medium" label="{{'Continue' | translate}}" type="button" (click)="onSubmit()" ></storybook-button-continue>
+
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
+

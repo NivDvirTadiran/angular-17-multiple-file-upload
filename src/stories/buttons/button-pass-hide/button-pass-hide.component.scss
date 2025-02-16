@@ -1,0 +1,57 @@
+button.Vector {
+  position: absolute;
+  width: 34px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+  border-bottom-width: 0;
+  //background-color: rgba(45, 148, 55, 0);
+
+  &:focus {
+    background-color: #ADDBFF;
+    border-radius: 25px;
+
+  }
+
+  &:hover {
+    border-color: #ADDBFF;
+    border-radius: 25px;
+  }
+}
+
+.Pass-Hide-Icon {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 33px;
+  height: 20px;
+
+  &:focus {
+    background-color: #ADDBFF;
+    border-radius: 25px;
+
+  }
+
+  &:hover {
+    border-color: #ADDBFF;
+    border-radius: 25px;
+  }
+}
+
+
+.storybook-button-pass-hide--show {
+    background-size: cover;
+    background-origin: border-box;
+    background-image: url("../../assets/images/EyeIcon1.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.storybook-button-pass-hide--hide {
+    background-size: cover;
+    background-origin: border-box;
+    background-image: url("../../assets/images/EyeIcon2.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+

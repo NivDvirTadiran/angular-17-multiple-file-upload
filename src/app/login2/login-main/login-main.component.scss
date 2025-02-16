@@ -1,0 +1,20 @@
+
+.storybook-login2 {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.Desktop-1Login-1 {
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+}
+
+.storybook-spinner1 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: calc(50% - 75px/2 - 0.25px);
+  top: calc(50% - 38px/2 - 0.5px);
+}
